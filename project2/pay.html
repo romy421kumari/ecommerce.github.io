@@ -1,0 +1,84 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Payment option
+	</title>
+	<script type="text/javascript">
+		function submit(){
+			var contact = document.forms["form"]["contact"];
+
+			if(contact.length!=10){
+				alert("enter valid number")
+				contact.focus();
+				return false;}
+			
+			else {return true;}
+	</script>
+	<style>
+		#box{background-color: brown;
+			height:80%;
+			width: 50%;
+			margin-top: 1px;
+			margin-right: 30px;
+			margin-left: 25%;
+			margin-bottom: 30px;
+			align-content: center;
+			border-style:dotted;
+			border-radius: 10px;}
+			label{ margin-left: 50px;
+				margin-top:30px;
+			font-size: 30px;
+			color:white; }
+			input{ font-size: 20px;
+			margin-left: 50px;
+			border-radius: 7px;
+			width: 500px;
+			height:28px;
+			 }
+			 button{ margin-left:245px;
+			 margin-top: 40px;
+			 background-color: black;
+			 color:white;
+			 height: 60px;
+			 width: 150px; 
+			 border-radius: 2px;
+			 font-size: 20px;
+			 border-color: brown;
+			 font-style: italic;
+			}
+			select{ height:32px;
+			width:200px; 
+			border-radius: 5px; 
+			font-size:15px;}
+</style>
+	<body>
+		<h1 align="center"><b><i><u>Payment</h1></i></b></u>
+		
+		<form name="form" onsubmit="return submit()" action="message.html">
+		<div id=box>
+			<label for="name">Name: </label> <br><input type="text" name="name" id="name" placeholder="Enter name " required/><br>
+			<label for="E-mail">Email: </label><br><input type="E-mail" name="E-mail" id="email" placeholder="example@gmail.com" required/><br>
+	<label for="Address"> Address:</label><br> <input type="Address" name="Address" id="address" placeholder="Enter shipping address" required/><br>
+			<label for="contact">Contact details:</label><br>  <input type="Telephone" name="Telephone" id="contact" placeholder="Enter contact details" required/><br><br><br>
+			<label for="payment" required/ >Choose payment option:</label>
+
+<select id="payment">
+  <option value="cash">Cash on Delievery</option>>
+  <option value="net">Netbanking</option>
+  <option value="Wallet">Wallet</option>
+  <option value="atm">ATM card</option>
+</select>
+			<button  type="submit">Proceed to pay</button>
+			
+			
+
+
+		</div>
+		<h3 align="center"><a href="index.html">Back</h3>
+	</form>
+		
+	</body>
+</head>
+</html>
